@@ -1,0 +1,19 @@
+nav a {
+          text-decoration: none;
+          padding:0.2em 0.6em;
+          border: 3px solid #3d322a;
+          background-color: #dbd3ce;
+         }   
+.menu {
+    display: inline-block;
+}
+nav ul { list-style:none;}
+
+* {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    color: #3d322a;
+}
+
+body {
+  background-color: #eeeae7 ;
+}
