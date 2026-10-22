@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Application page for Vinggroup">
+        <meta name="keywords" content="Application, Vinggroup">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/Application-Page.css">
+        <title>Apply for Vinggroup</title>
+    </head>
+<body>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html">
+        <img src="Styles/Logo.png" alt="" width="40" height="40">
+        <span class="wordmark"><b>Ving</b>group</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="apply.html" aria-current="page">Apply</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+ 
+  <main id="main" class="wrap layout">
+ 
+    <aside class="summary" aria-labelledby="next-heading">
+      <h1>Apply to Vinggroup</h1>
+      <p class="lead">Tell us who you are and which role fits you. A recruiter reads every application and replies within five working days.</p>
+ 
+      <h2 id="next-heading">What happens next</h2>
+      <ol class="steps">
+        <li>We<strong>review</strong> your application against the role.</li>
+        <li><strong>A short call</strong> with a recruiter, about 20 minutes.</li>
+        <li><strong>Technical interview</strong> with the team you would join.</li>
+        <li><strong>Offer and medical.</strong> Offshore roles need an offshore medical before a start date.</li>
+      </ol>
+ 
+      <p class="note">Questions before you apply? Email <a href="mail to: WeAreTheRealVinggroup@gmail.com">WeAreTheRealVinggroup@gmail.com</a>.</p>
+    </aside>
+
+      <fieldset>
+        <legend>The job</legend>
+        <div class="field wide">
+          <label for="job-ref">Job reference number <span aria-hidden="true">*</span></label>
+          <input type="text" id="job-ref" name="job_ref" maxlength="5" pattern="[A-Za-z0-9]{5}" title="Exactly 5 letters or numbers" required aria-describedby="job-ref-hint">
+          <p class="hint" id="job-ref-hint">Exactly 5 letters or numbers, shown on the vacancy listing.</p>
+        </div>
+      </fieldset>
+ 
+      <fieldset>
+        <legend>Personal details</legend>
+ 
+        <div class="field">
+          <label for="first-name">First name <span aria-hidden="true">*</span></label>
+          <input type="text" id="first-name" name="first_name" maxlength="20" pattern="[A-Za-z]{1,20}" title="Letters only, up to 20 characters" autocomplete="given-name" required>
+        </div>
+ 
+        <div class="field">
+          <label for="last-name">Last name <span aria-hidden="true">*</span></label>
+          <input type="text" id="last-name" name="last_name" maxlength="20" pattern="[A-Za-z]{1,20}" title="Letters only, up to 20 characters" autocomplete="family-name" required>
+        </div>
+ 
+        <div class="field">
+          <label for="dob">Date of birth <span aria-hidden="true">*</span></label>
+          <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" maxlength="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}" title="Use the format dd/mm/yyyy" autocomplete="bday" required aria-describedby="dob-hint">
+          <p class="hint" id="dob-hint">Format: dd/mm/yyyy</p>
+        </div>
+ 
+        <fieldset class="group">
+          <legend>Gender <span aria-hidden="true">*</span></legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="gender" value="female" required> Female</label>
+            <label class="choice"><input type="radio" name="gender" value="male"> Male</label>
+            <label class="choice"><input type="radio" name="gender" value="other"> Other</label>
+          </div>
+        </fieldset>
+      </fieldset>
+ 
+      <fieldset>
+        <legend>Address</legend>
+ 
+        <div class="field wide">
+          <label for="street">Street address <span aria-hidden="true">*</span></label>
+          <input type="text" id="street" name="street" maxlength="40" autocomplete="street-address" required>
+        </div>
+ 
+        <div class="field">
+          <label for="suburb">Suburb/Town <span aria-hidden="true">*</span></label>
+          <input type="text" id="suburb" name="suburb" maxlength="40" autocomplete="address-level2" required>
+        </div>
+ 
+        <div class="field">
+          <label for="state">State <span aria-hidden="true">*</span></label>
+          <select id="state" name="state" autocomplete="address-level1" required>
+            <option value="">Choose a state</option>
+            <option value="state1">state</option>
+            <option value="state2">state</option>
+            <option value="state3">state</option>
+            <option value="state4">state</option>
+            <option value="state5">state</option>
+            <option value="other">other state,please email us</option>
+          </select>
+        </div>
+ 
+        <div class="field">
+          <label for="postcode">Postcode <span aria-hidden="true">*</span></label>
+          <input type="text" id="postcode" name="postcode" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" title="Exactly 4 digits" autocomplete="postal-code" required>
+        </div>
+      </fieldset>
+ 
+      <fieldset>
+        <legend>Contact</legend>
+ 
+        <div class="field">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+ 
+        <div class="field">
+          <label for="phone">Phone number <span aria-hidden="true">*</span></label>
+          <input type="tel" id="phone" name="phone" inputmode="numeric" maxlength="12" pattern="[0-9]{8,12}" title="8 to 12 digits, numbers only" autocomplete="tel" required aria-describedby="phone-hint">
+          <p class="hint" id="phone-hint">8 to 12 digits, no spaces.</p>
+        </div>
+      </fieldset>
+ 
+      <fieldset>
+        <legend>Skills</legend>
+ 
+        <div class="choices wide">
+          <label class="choice"><input type="checkbox" name="skills" value="communication"> Communication</label>
+          <label class="choice"><input type="checkbox" name="skills" value="teamwork"> Teamwork</label>
+          <label class="choice"><input type="checkbox" name="skills" value="problem-solving"> Problem solving</label>
+          <label class="choice"><input type="checkbox" name="skills" value="first-aid"> First aid</label>
+          <label class="choice"><input type="checkbox" name="skills" value="licence"> Driver licence</label>
+          <label class="choice"><input type="checkbox" name="skills" value="computing"> Computer skills</label>
+        </div>
+ 
+        <div class="field wide other">
+          <label for="other-skills">Other skills</label>
+          <textarea id="other-skills" name="other_skills" rows="5"></textarea>
+        </div>
+      </fieldset>
+ 
+      <div class="actions">
+        <button type="submit">Send application</button>
+        <button type="reset" class="secondary">Clear form</button>
+      </div>
+    </form>
+ 
+  </main>
+ 
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 vinggroup, we are not real please dont sue us.</p>
+    </div>
+  </footer>
+</body>
+</html>
+ 
