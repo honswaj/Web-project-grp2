@@ -17,7 +17,14 @@ nav ul { list-style:none;}
 body {
   background-color: #eeeae7 ;
 }
-
+.summary h1 {
+    border: solid 4px;
+    background-color: #3d322a;
+    color: #dbd3ce;
+    padding: 13px;
+    margin-left: 11cap;
+    margin-right: 11cap;
+}
 .summary {
     text-align: center;
 }
