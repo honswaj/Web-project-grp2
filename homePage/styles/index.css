@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', Helvetica, sans-serif;
+    background: #ffffff;
+}
+
+.index-header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #dbd3ce;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #3d322a;
+  justify-self: start;
+  text-decoration: none;
+}
+.logo { width: 60px; height: 60px; }
+.company-name { font-size: 0.6cm; font-weight: 600;}
+ 
+.nav { display: flex; gap: 32px; }
+.nav a { color: #3d322a; font-weight: 600; font-size: 0.6cm; text-decoration: none; }
+.nav a:hover { color: #3dbce3; }
+ 
+.search { display: flex; gap: 8px; justify-self: end; }
+.search input {
+  padding: 8px 12px;
+  border: 1px solid #3d322a;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.search button {
+  padding: 8px 16px;
+  background: #5acede;
+  color: #3d322a;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding-left: 120px;
+  box-sizing: border-box;
+  background-color: #0b0d10;
+  background-size: 40px 40px;
+  color: #fff;
+}
+
+
+.hero .slogan {
+  display: inline-block;
+  margin: 0 0 24px;
+  padding: 12px 30px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.hero .hero-title {
+  margin: 0 0 24px;
+  color: #fff;
+  font-size: 55px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.hero .description {
+  max-width: 620px;
+  margin: 0 0 36px;
+  color: rgba(255,255,255,.88);
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.hero-visual { width: 100%; }
+.hero-image {
+  display: block;
+  width: 100%;
+
+  max-height: 850px;
+  object-fit: cover;
+}
