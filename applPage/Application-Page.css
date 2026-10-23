@@ -1,0 +1,42 @@
+nav a {
+          text-decoration: none;
+          padding:0.2em 0.6em;
+          border: 3px solid #3d322a;
+          background-color: #dbd3ce;
+         }   
+.menu {
+    display: inline-block;
+}
+nav ul { list-style:none;}
+
+* {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    color: #3d322a;
+}
+
+body {
+  background-color: #eeeae7 ;
+}
+
+.summary {
+    text-align: center;
+}
+.summary ol {
+    text-align: left;
+    margin-left: 2cap; 
+    margin-bottom: 2cap;
+    margin-right: 1cap;
+}
+.summary h2 {
+    text-align: left;
+    margin-left: 1cap;
+    margin-top: 1cap;
+}
+.infoBox {
+    border: solid 5px; 
+    background-color: #90d6ec;
+    text-decoration: none; 
+    padding:0.2em 0.6em;
+    margin-left: 10cap;
+    margin-right: 10cap;
+}

@@ -1,0 +1,124 @@
+/*navigation bar */
+nav a {
+          text-decoration: none;
+          padding:0.2em 0.6em;
+          border: 3px solid #3d322a;
+          background-color: #dbd3ce;
+         }   
+.menu {
+    display: inline-block;
+}
+nav ul { list-style:none;}
+
+* {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    color: #3d322a;
+}
+
+body {
+  background-color: #eeeae7 ;
+}
+/* id's*/
+ 
+h1, h2 {
+  text-align: center;
+  color: #dbd3ce;
+  margin-bottom: 40px;
+}
+/*flex display so they sit side by side*/
+.card-row {
+  display: flex;
+  gap: 24px;          
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  flex: 1;                 /* the cards take up the same amount of space flexibly */
+  background-color: #dbd3ce;
+  border: 3px solid #3dbce3;
+  border-radius: 14px;
+  text-align: center;
+  padding-bottom: 20px;
+  overflow: hidden;        /*hide the any text outside of the borders*/
+ 
+  /* box shading for swag*/
+  box-shadow:  0 10px 20px rgb(87, 200, 234);
+  /*i set specific time for the hover effects to work so it isnt jumpy */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+ /*hover effects to enlarge the card slightly*/
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-header {
+  background-color: #3dbce3;
+  color: #3d322a;
+  padding: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+ 
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;      /* makes the avatar a circle */
+  background-color: #dbd3ce;
+  color: #3d322a;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: 3px solid #3d322a;
+  margin: 20px auto 10px;  
+  /*centering contents*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  transition: transform 0.2s;
+}
+ 
+/* hover effects for the avatar*/
+.card:hover .avatar {
+  transform: scale(1.1);
+}
+ 
+.card h2 {
+  margin: 10px 0 5px;
+  color: #3d322a;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+ 
+.card p {
+  margin: 4px 10px;
+  color: #444;
+  font-size: 0.9rem;
+}
+ 
+.student-id {
+  font-weight: bold;
+  color: #e63946;
+}
+/* i made it so the cards with move into a 2nd row to accomodate phone screens or smaller ui's*/
+
+@media (max-width: 800px) {
+  .card-row {
+    flex-wrap: wrap;
+  }
+  .card {
+    flex: 1 1 40%;
+  }
+}
+.cornerLogo {
+    position: absolute; /*makes it a different object from text and other stuff on page*/
+    top: 10px;
+    right: 10px;
+    width: 80px;
+}
+
+.card dl {
+  text-align: left;
+  margin-left: 2cap;
+  margin-right: 2cap;
+}
