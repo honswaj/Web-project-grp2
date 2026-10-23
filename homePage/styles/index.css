@@ -9,6 +9,7 @@ body {
     background: #ffffff;
 }
 
+/* I used AI to generate me the first padding, margin and font-size value then tinker around */
 .index-header {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -16,13 +17,12 @@ body {
     padding: 12px 24px;
     background-color: #dbd3ce;
 }
-
+/* I used AI to recommend the display for some of the elements */
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
   color: #3d322a;
-  justify-self: start;
   text-decoration: none;
 }
 .logo { width: 60px; height: 60px; }
@@ -56,7 +56,6 @@ body {
   padding-left: 120px;
   box-sizing: border-box;
   background-color: #0b0d10;
-  background-size: 40px 40px;
   color: #fff;
 }
 
@@ -65,7 +64,7 @@ body {
   display: inline-block;
   margin: 0 0 24px;
   padding: 12px 30px;
-  border: 1px solid rgba(255,255,255,.28);
+  border: 1px solid #ffffff;
   border-radius: 999px;
   color: #fff;
   font-size: 16px;
@@ -83,10 +82,12 @@ body {
 .hero .description {
   max-width: 620px;
   margin: 0 0 36px;
-  color: rgba(255,255,255,.88);
+  color: #ffff;
   font-size: 20px;
   line-height: 1.7;
 }
+
+ 
 
 .hero-visual { width: 100%; }
 .hero-image {
@@ -95,4 +96,26 @@ body {
 
   max-height: 850px;
   object-fit: cover;
+}
+
+.services {
+  padding: 80px 120px;
+  gap: 40px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.services .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3d322a;
+  text-align: center;
+
+}
+
+.services .the-service {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 40px;
+  text-align: center;
 }
