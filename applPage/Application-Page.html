@@ -50,8 +50,7 @@
         <legend>The job</legend>
         <div class="field wide">
           <label for="job-ref">Job reference number: </span></label>
-          <input type="text" id="job-ref" name="job_ref" maxlength="5" pattern="[A-Za-z0-9]{5}" title="Exactly 5 letters or numbers" required aria-describedby="job-ref-hint">
-          <p class="hint" id="job-ref-hint">Exactly 5 letters or numbers, shown on the vacancy listing.</p>
+          <input type="text" id="job-ref" name="job_ref" maxlength="5" pattern="[A-Za-z0-9]{5}" title="Exactly 5 letters or numbers">
         </div>
       </fieldset>
  
@@ -70,7 +69,7 @@
  
         <div class="field">
           <label for="dob">Date of birth: </span></label>
-          <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" maxlength="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}">
+          <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" maxlength="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}" title="Use the format dd/mm/yyyy" autocomplete="bday" required aria-describedby="dob-hint">
           <p class="hint" id="dob-hint">Format: dd/mm/yyyy</p>
         </div>
  
@@ -125,9 +124,8 @@
         </div>
  
         <div class="field">
-          <label for="phone">Phone number <span aria-hidden="true">*</span></label>
-          <input type="tel" id="phone" name="phone" inputmode="numeric" maxlength="12" pattern="[0-9]{8,12}" title="8 to 12 digits, numbers only" autocomplete="tel" required aria-describedby="phone-hint">
-          <p class="hint" id="phone-hint">8 to 12 digits, no spaces.</p>
+          <label for="phone">Phone number: </label>
+          <input type="tel" id="phone" name="phone" inputmode="numeric" maxlength="12" pattern="[0-9]{8,12}" title="8 to 12 digits, numbers only" autocomplete="tel">
         </div>
       </fieldset>
  
@@ -149,17 +147,15 @@
         </div>
       </fieldset>
  
-      <div class="actions">
         <button type="submit">Send application</button>
         <button type="reset" class="secondary">Clear form</button>
-      </div>
     </form>
  
   </main>
  
   <footer class="site-footer">
     <div class="wrap">
-      <p>&copy; 2026 vinggroup, we are not real please dont sue us.</p>
+      <p>&copy; 2026 Vinggroup, we are not real please dont sue us.</p>
     </div>
   </footer>
 </body>
