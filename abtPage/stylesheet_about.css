@@ -145,3 +145,12 @@ h1, h2 {
   margin-left: 2cap;
   margin-right: 2cap;
 }
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+ol ul {list-style:square;}
+table, th, td{
+    border: 4px solid #3dbce3;
+}
