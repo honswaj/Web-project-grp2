@@ -1,11 +1,32 @@
-/*How do i wrapped the border around the padding of the text
-I want the header to fit in different screen without using margin*/
+body {
+  margin: 0;    
+}
+
+.topbar {
+  background-color: #3d322a;
+  display: flex;
+  justify-content: space-between;  /* puts the menu on the left and the logo on the right */
+  align-items: center;
+  padding: 25px 20px;
+  
+}
+
+.siteFooter {
+  background-color: #3d322a;
+  padding: 10px 8px;
+}
+
+footer p {
+  color: #dbd3ce;
+}
 /*navigation bar */
 nav a {
           text-decoration: none;
+          font-weight: 800;
           padding:0.2em 0.6em;
-          border: 3px solid #3d322a;
+          border: 3px solid #3dbce3;
           background-color: #dbd3ce;
+          color: #3d322a;
          }   
 .menu {
     display: inline-block;
@@ -42,7 +63,7 @@ h1, h2 {
   border-radius: 14px;
   text-align: center;
   padding-bottom: 20px;
-  overflow: hidden;        /*hide the any text outside of the borders*/
+  overflow: hidden;        /* i used ai to hide the any text outside of the borders*/
  
   /* box shading for swag*/
   box-shadow:  0 10px 20px rgb(87, 200, 234);
