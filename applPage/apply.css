@@ -17,6 +17,8 @@ nav ul { list-style:none;}
   justify-content: space-between;  /* puts the menu on the left and the logo on the right */
   align-items: center;
   padding: 25px 20px;
+  border-top: #3dbce3 solid 7px;
+  border-bottom: #3dbce3 solid 7px;
   
 }
 
@@ -27,6 +29,7 @@ nav ul { list-style:none;}
 
 body {
   background-color: #eeeae7 ;
+  margin: 0;
 }
 .summary h1 {
     border: solid 4px;
@@ -59,3 +62,30 @@ body {
     margin-right: 15%;
 }
 
+.tablesInfo fieldset { /*i used ai to generate and give suggestions for different types
+     of designs for tables and i tweaked it into this*/
+    border: 2px solid #3d322a;
+    background: #ffffff;
+    padding: 24px 16px 16px 16px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+    }
+
+.tablesInfo legend {
+    background-color: #3d322a;
+    color: #ffffff;
+    padding: 4px 12px;
+    font-size: 0.875rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+}
+.siteFooter {
+  background-color: #3d322a;
+  padding: 10px 8px;
+  margin-top: 4cap;
+}
+
+footer p {
+  color: #dbd3ce;
+}

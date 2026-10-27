@@ -8,11 +8,15 @@ body {
   justify-content: space-between;  /* puts the menu on the left and the logo on the right */
   align-items: center;
   padding: 25px 20px;
+  border-top: #3dbce3 solid 7px;
+  border-bottom: #3dbce3 solid 7px;
+  
   
 }
 
 .siteFooter {
   background-color: #3d322a;
+  margin-top: 4cap;
   padding: 10px 8px;
 }
 
