@@ -14,7 +14,7 @@ nav ul { list-style:none;}
 .topbar {
   background-color: #3d322a;
   display: flex;
-  justify-content: space-between;  /* puts the menu on the left and the logo on the right */
+  justify-content: space-between;
   align-items: center;
   padding: 25px 20px;
   border-top: #3dbce3 solid 7px;
