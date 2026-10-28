@@ -150,6 +150,16 @@ h1, h2 {
   margin-right: 2cap;
 }
 
+.tablehead {
+  color: #3d322a;
+  border: #3dbce3 solid 5px;
+  padding: 6px 6px;
+  margin-left: 29%;
+  margin-right: 29%;
+  background-color: white;
+  margin-bottom: 3cap;
+}
+
 table {
     margin: 0 auto;
     border-collapse: collapse;
@@ -157,4 +167,16 @@ table {
 ol ul {list-style:square;}
 table, th, td{
     border: 4px solid #3dbce3;
+}
+.tableFact {
+  background-color: white;
+
+}
+.infobar th {
+  background-color: #3d322a;
+  color: #dbd3ce;
+  font-weight: 700;
+}
+.classtime {
+  font-weight: 600;
 }
