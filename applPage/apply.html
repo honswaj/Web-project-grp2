@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="Application-Page.css">
-<img class="cornerLogo" src="Logo.png">
+<link rel="stylesheet" href="apply.css">
 <head>   
  <style>
     .cornerLogo {
-      position: absolute;
-      right: 10px;
       width: 80px;
     }
   </style>
@@ -20,19 +17,22 @@
     </head>
 
 <body>
+  <header class="topbar">
     <nav>
-    <p class="menu"><a href="#index">Home</a></p> 
-    <p class="menu"><a href="#jobs">Jobs</a></p> 
-    <p class="menu"><a href="#apply">Apply</a></p> 
-    <p class="menu"><a href="#about">About</a></p> 
+    <p class="menu"><a href="../homePage/index.html">Home</a></p> 
+    <p class="menu"><a href="../jobsPage/jobs.html">Jobs</a></p> 
+    <p class="menu"><a href="../applPage/apply.html">Apply</a></p> 
+    <p class="menu"><a href="../abtPage/about.html">About</a></p> 
     </nav>
+    <img class="cornerLogo" src="logo.png">
+  </header>
 </body>
 
   <main id="main" class="wrap layout">
  
     <aside class="summary">
       <h1>Apply to Vinggroup</h1>
-      <p class="lead">Tell us who you are and which role fits you. A recruiter reads every application and replies within five working days.</p>
+      <p style="font-weight: 600;">Tell us who you are and which role fits you. A recruiter reads every application and replies within five working days.</p>
     <div class="infoBox">
       <h2 id="next-heading">What happens next</h2>
       <ol class="steps">
@@ -43,10 +43,12 @@
       </ol>
     </div>
  
-      <p class="note">Questions before you apply? Email <a href="mail to: WeAreTheRealVinggroup@gmail.com">WeAreTheRealVinggroup@gmail.com</a>.</p>
+      <p style="font-weight: 600;">Questions before you apply? Email <a href="WeAreTheRealVinggroup@gmail.com">WeAreTheRealVinggroup@gmail.com</a>.</p>
     </aside>
 
-      <fieldset>
+    <form class="tablesInfo">
+
+      <fieldset class="jobno">
         <legend>The job</legend>
         <div class="field wide">
           <label for="job-ref">Job reference number: </span></label>
@@ -54,7 +56,7 @@
         </div>
       </fieldset>
  
-      <fieldset>
+      <fieldset class="personalDetails">
         <legend>Personal details</legend>
  
         <div class="field">
@@ -82,7 +84,7 @@
         </fieldset>
       </fieldset>
  
-      <fieldset>
+      <fieldset class="adress">
         <legend>Address</legend>
  
         <div class="field wide">
@@ -99,12 +101,14 @@
           <label for="state">State: </span></label>
           <select id="state" name="state" autocomplete="address-level1" required>
             <option value="">Choose a state</option>
-            <option value="state1">state</option>
-            <option value="state2">state</option>
-            <option value="state3">state</option>
-            <option value="state4">state</option>
-            <option value="state5">state</option>
-            <option value="other">other state,please email us</option>
+            <option>VIC</option>
+            <option>NSW</option>
+            <option>QLD</option>
+            <option>NT</option>
+            <option>WA</option>
+            <option>SA</option>
+            <option>TAS</option>
+            <option>ACT</option>
           </select>
         </div>
  
@@ -114,7 +118,7 @@
         </div>
       </fieldset>
  
-      <fieldset>
+      <fieldset class="infoContact">
         <legend>Contact</legend>
  
         <div class="field">
@@ -128,7 +132,7 @@
         </div>
       </fieldset>
  
-      <fieldset>
+      <fieldset class="skills">
         <legend>Skills</legend>
  
         <div class="choices wide">
@@ -145,14 +149,15 @@
           <textarea id="other-skills" name="other_skills" rows="5"></textarea>
         </div>
       </fieldset>
- 
+      <div class="buttons">
         <button type="submit">Send application</button>
         <button type="reset" class="secondary">Clear form</button>
+      </div>
     </form>
- 
+ </div>
   </main>
  
-  <footer class="site-footer">
+  <footer class="siteFooter">
     <div class="wrap">
       <p>&copy; 2026 Vinggroup, we are not real please dont sue us.</p>
     </div>
