@@ -14,6 +14,7 @@ nav ul { list-style:none;}
 .topbar {
   display: flex;
   align-items: center;
+  justify-content: flex-start; /*Alway start on the left*/
   gap: 12px;
   background-color: #3d322a;
   padding: 10px 20px;

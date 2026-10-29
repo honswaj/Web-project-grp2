@@ -101,9 +101,10 @@ nav ul {
 .topbar {
   background-color: #3d322a;
   display: flex;
-  justify-content: space-between;  /* puts the menu on the left and the logo on the right */
+  justify-content: flex-start; /*Alway start on the left*/
+  gap: 12px;
   align-items: center;
-  padding: 25px 20px;
+  padding: 25px 30px;
 }
 
 .siteFooter {
@@ -146,7 +147,8 @@ nav ul {
     font-weight: 800;
     color: #021515;
     text-align: center;
-    margin: 0;
+    width: 100%;
+    margin: 0 auto;
     letter-spacing: -0.03em;
 }
 

@@ -14,7 +14,8 @@ body {
 .indexHeader {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;    /*prevent the search bar from overflowing on narrow screen*/        
+  flex-wrap: wrap;    /*prevent the search bar from overflowing on narrow screen*/  
+  justify-content: flex-start; /*Alway start on the left*/      
   background-color: #3d322a;
   padding: 10px 20px;
 }
