@@ -2,7 +2,7 @@ nav a {
     text-decoration: none;
     font-weight: 800;
     padding:0.2em 0.6em;
-    border: 3px solid #3dbce3;
+    border: 4px solid #3dbce3;
     background-color: #dbd3ce;
     color: #3d322a;
     }   
@@ -12,14 +12,27 @@ nav a {
 nav ul { list-style:none;}
 
 .topbar {
-  background-color: #3d322a;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 25px 20px;
-  border-top: #3dbce3 solid 7px;
-  border-bottom: #3dbce3 solid 7px;
-  
+  gap: 12px;
+  background-color: #3d322a;
+  padding: 10px 20px;
+  border-top: 7px solid #3dbce3;
+  border-bottom: 7px solid #3dbce3;
+}
+
+.cornerLogo {
+  height: 60px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+}
+
+.nav p {
+  margin: 0;
 }
 
 * {

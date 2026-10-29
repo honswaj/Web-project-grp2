@@ -13,12 +13,15 @@ body {
 /* I used AI to generate me the first padding, margin and font-size value then tinker around */
 .indexHeader {
   display: flex;
-  align-items: center;            
+  align-items: center;
+  flex-wrap: wrap;    /*prevent the search bar from overflowing on narrow screen*/        
   background-color: #3d322a;
   padding: 10px 20px;
 }
+
 .logo {
-  align-items: end;
+  height: 60px;
+  width: auto;
 }
 /* I used AI to recommend the display for some of the elements */
 .brand {
@@ -28,9 +31,9 @@ body {
   color: #3d322a;
   text-decoration: none;
 }
-.logo { width: 60px; height: 60px; border-radius: 80% }
+.logo { width: auto; height: 60px;}
  
-.nav { display: flex; gap: 32px; }
+.nav { display: flex; gap: 12px; }
 .nav a { text-decoration: none;
     font-weight: 800;
     padding:0.2em 0.6em;
@@ -39,7 +42,7 @@ body {
     color: #3d322a; }
 .nav a:hover { color: darkslategrey; }
  
-.search { display: flex; gap: 8px; justify-content: space-evenly; margin-left: auto;}
+.search { display: flex; gap: 6px; justify-content: space-evenly; margin-left: auto;}
 .search input {
   padding: 8px 12px;
   border: 1px solid #3d322a;
