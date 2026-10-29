@@ -16,13 +16,52 @@ body {
 
 .siteFooter {
   background-color: #3d322a;
-  margin-top: 4cap;
-  padding: 10px 8px;
+  padding: 12px 2%;
 }
 
-footer p {
-  color: #dbd3ce;
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
+.footerLinks {
+  background-color: #654e3e;
+  padding: 1.5%;
+}
+.footerLinks a {
+  color: #dbd3ce;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.footerLinks a:hover {
+  color: #3dbce3;
+}
+
+.footerLinks a:first-child {
+  text-align: left;
+  padding-left: 20px;
+  margin-left: 18%;
+}
+
+.footerLinks a:last-child {
+  text-align: right;
+  padding-right: 20px;
+  margin-right: 18%;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+}
+
+.footerBottom p {
+  color: #dbd3ce;
+  margin: 0;
+}
+
 /*navigation bar */
 nav a {
           text-decoration: none;
