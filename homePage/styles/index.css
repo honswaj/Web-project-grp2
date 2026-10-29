@@ -13,12 +13,13 @@ body {
 /* I used AI to generate me the first padding, margin and font-size value then tinker around */
 .indexHeader {
   display: flex;
-  align-items: center;
-  gap: 20px;                 /* even space between the items */
+  align-items: center;            
   background-color: #3d322a;
   padding: 10px 20px;
 }
-
+.logo {
+  align-items: end;
+}
 /* I used AI to recommend the display for some of the elements */
 .brand {
   display: flex;
