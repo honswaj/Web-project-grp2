@@ -100,11 +100,12 @@ body {
   margin-bottom: 10px;
 }
 .footerLinks {
-  background-color: #654e3e;
+  background-color: #dbd3ce;
+  border: #3dbce3 5px solid;
   padding: 1.5%;
 }
 .footerLinks a {
-  color: #dbd3ce;
+  color: #3d322a;
   text-decoration: none;
   font-weight: 800;
   font-size: 20px;
@@ -135,4 +136,13 @@ body {
 .footerBottom p {
   color: #dbd3ce;
   margin: 0;
+}
+
+.buttons button {
+  margin-bottom: 2%;
+  border: #3d322a 3px solid;
+  color: #dbd3ce;
+  background-color: #3d322a;
+  border-radius: 5px;
+  margin-left: 2%;
 }
