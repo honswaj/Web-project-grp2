@@ -15,7 +15,7 @@ nav ul { list-style:none;}
    background-color: #3d322a;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 17px;
   justify-content: flex-start; /*Alway start on the left*/
   padding: 10px 20px;
   border-top: #3dbce3 solid 7px;
