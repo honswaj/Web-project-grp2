@@ -12,19 +12,14 @@ nav a {
 nav ul { list-style:none;}
 
 .topbar {
+   background-color: #3d322a;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /*Alway start on the left*/
   gap: 12px;
-  background-color: #3d322a;
+  justify-content: flex-start; /*Alway start on the left*/
   padding: 10px 20px;
-  border-top: 7px solid #3dbce3;
-  border-bottom: 7px solid #3dbce3;
-}
-
-.cornerLogo {
-  height: 60px;
-  width: auto;
+  border-top: #3dbce3 solid 7px;
+  border-bottom: #3dbce3 solid 7px;
 }
 
 .nav {
