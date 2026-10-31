@@ -283,6 +283,45 @@ box-sizing: border-box;
   justify-content: space-between;  
   align-items: center;
 }
+.job-aside {
+    float: right;
+    width: 25%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.box1, .box2 {
+    display: block;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    margin: 0 0 16px 24px;
+    padding: 16px;
+    border: 3px solid #3dbce3;
+
+    background-color: #dbd3ce;               
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+aside .jo1_img,
+aside .jo2_img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /*used Ai to help with this part. took hours*/
+    object-fit: cover;
+}
+
+aside:hover {
+    transform: translateY(-4px);               
+}
+
+.job-aside p {
+    color: #3d322a;
+}
 
 .footerBottom p {
   color: #dbd3ce;
