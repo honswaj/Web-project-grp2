@@ -1,56 +1,48 @@
+* {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    color: #3d322a;
+}
+
 nav a {
     text-decoration: none;
-    display: inline-block;
     font-weight: 800;
-    padding: 0.2em 0.6em;
-    border: 3px solid #3dbce3;
+    padding:0.2em 0.6em;
+    border: 4px solid #3dbce3;
     background-color: #dbd3ce;
     color: #3d322a;
+    }   
+.menu {
+    display: inline-block;
+}
+nav ul { list-style:none;}
 
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+.topbar {
+   background-color: #3d322a;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  justify-content: flex-start; /*Alway start on the left*/
+  padding: 10px 20px;
+  border-top: #3dbce3 solid 7px;
+  border-bottom: #3dbce3 solid 7px;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+}
+
+.nav p {
+  margin: 0;
 }
 
 nav a:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 8px #2f2620;
 }
-
-.menu {
-    display: inline-block;
-}
-
-nav ul {
-    list-style: none;
-}
-
-.topbar {
-  background-color: #3d322a;
-  display: flex;
-  justify-content: space-between;  /* puts the menu on the left and the logo on the right */
-  align-items: center;
-  padding: 25px 20px;
-}
-
-.site-Footer {
-background-color: #3d322a;
-padding: 10px;
-margin-top: auto;
-width: 100%;
-box-sizing: border-box;
-}
-
-.site-Footer p {
-    color: #ffffff;
-    margin: 0;
-    font-size: 12px;
-    line-height: 1.5;
-}
-
 .cornerLogo {
 width: 100px;
 height: auto;
-border-radius: 100%;
 }
 
 * {
@@ -246,4 +238,53 @@ box-sizing: border-box;
 
 .J {
     color: #3dbce3;
+}
+
+.siteFooter {
+  background-color: #3d322a;
+  padding: 12px 2%;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.footerLinks {
+  background-color: #dbd3ce;
+  border: #3dbce3 5px solid;
+  padding: 1.5%;
+}
+.footerLinks a {
+  color: #3d322a;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.footerLinks a:hover {
+  color: #3dbce3;
+}
+
+.footerLinks a:first-child {
+  text-align: left;
+  padding-left: 20px;
+  margin-left: 18%;
+}
+
+.footerLinks a:last-child {
+  text-align: right;
+  padding-right: 20px;
+  margin-right: 18%;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+}
+
+.footerBottom p {
+  color: #dbd3ce;
+  margin: 0;
 }

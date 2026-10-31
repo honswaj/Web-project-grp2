@@ -48,7 +48,10 @@
   border: 4px solid #3dbce3;
   background-color: #dbd3ce;
   color: #3d322a; }
-.nav a:hover { color: darkslategrey; }
+nav a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 8px #2f2620;
+}
  
 .search { display: flex; gap: 6px; justify-content: space-evenly; margin-left: auto;}
 .search input {
