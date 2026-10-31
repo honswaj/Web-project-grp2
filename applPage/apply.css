@@ -145,7 +145,7 @@ body {
 }
 
 .buttons button {
-  margin-bottom: 2%;
+  margin: 1%;
   border: #3d322a 3px solid;
   color: #dbd3ce;
   background-color: #3d322a;
