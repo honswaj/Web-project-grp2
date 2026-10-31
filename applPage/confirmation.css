@@ -1,3 +1,4 @@
+/* i add this in to ensures the HTML root takes up the full height of the viewport */
 html {
   height: 100%;
 }

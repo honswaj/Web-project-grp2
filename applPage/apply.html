@@ -5,7 +5,6 @@
   <meta name="keywords" content="Application, Vinggroup">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Apply for Vinggroup</title>
-  </style>
   <link rel="stylesheet" href="apply.css">
   <style>
     .cornerLogo {
@@ -46,7 +45,7 @@
       <p style="font-weight: 600;">Questions before you apply? Email: <a href="mailto: WeAreTheRealVinggroup@gmail.com">WeAreTheRealVinggroup@gmail.com</a>.</p>
     </aside>
 
-    <form class="tablesInfo" action="confirmation.html" method="get">
+    <form class="tablesInfo" action="confirmation.html" method="post"></form>
 
       <fieldset class="jobno">
         <legend>The job</legend>
@@ -58,7 +57,7 @@
  
       <fieldset class="personalDetails">
         <legend>Personal details</legend>
- 
+        <!--I use ai for help making me the pattern and the autocomplete -->
         <div class="field">
           <label for="first-name">First name: </span></label>
           <input type="text" id="first-name" name="first_name" maxlength="20" pattern="[A-Za-z]{1,20}" title="Letters only, up to 20 characters" autocomplete="given-name" required>
@@ -120,7 +119,6 @@
  
       <fieldset class="infoContact">
         <legend>Contact</legend>
- 
         <div class="field">
           <label for="email">Email: </span></label>
           <input type="email" id="email" name="email" autocomplete="email" required>
@@ -164,7 +162,9 @@
   </div>
   <div class="footerBottom">
     <p>&copy; 2026 Vinggroup, Group Project Website.</p>
-    <img src="logo (1).png" alt="Swinburne logo">
+    <a href="https://www.swinburne.edu.au/">
+      <img src="logo (1).png" alt="Swinburne logo">
+    </a>
   </div>
 </footer>
 </body>
