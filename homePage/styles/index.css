@@ -212,8 +212,9 @@ nav a:hover {
   padding: 14px 16px;
   border-bottom: 2px solid #3f2614;
   border-right: 1px solid #3f2614;
-  color: #cf6316;
+  color: #2f2620;
   font-weight: 700;
+  background-color: #7bcde7;
 }
 
 .planning-table .latter th:last-child {
