@@ -76,22 +76,23 @@ body {
 }
 
 .tablesInfo fieldset { /*i used ai to generate and give suggestions for different types
-     of designs for tables and i tweaked it into this*/
-    border: 2px solid #3d322a;
-    background: #ffffff;
-    padding: 24px 16px 16px 16px;
-    margin: 20px 0;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
-    }
+    of designs for tables and i tweaked it into this*/
+  border: 2px solid #3d322a;
+  background: #ffffff;
+  padding: 24px 16px 16px 16px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+  line-height: 2;
+  }
 
 .tablesInfo legend {
-    background-color: #3d322a;
-    color: #ffffff;
-    padding: 4px 12px;
-    font-size: 0.875rem;
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    border-radius: 4px;
+  background-color: #3d322a;
+  color: #ffffff;
+  padding: 4px 12px;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
 }
 .siteFooter {
   background-color: #3d322a;
