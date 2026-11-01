@@ -220,7 +220,7 @@ box-sizing: border-box;
     object-fit: cover;          
     border-radius: 8px;
     display: block;
-    border-style: 3px dashed #ffffff;
+    border-style: solid;
 }
 
 .jo2_img {
@@ -229,7 +229,7 @@ box-sizing: border-box;
     object-fit: cover; 
     border-radius: 8px;
     display: block;
-    border-style: 3px dashed #ffffff;
+    border-style: solid;
 }
 
 .bold {
