@@ -49,7 +49,7 @@ h1, h2 {
   color: #dbd3ce;
   margin-bottom: 40px;
 }
-/*flex display so they sit side by side*/
+/*flex display so they sit side by side; i used ai to help me create more aesthetic looking student ids*/
 .card-row {
   display: flex;
   gap: 24px;          
@@ -64,7 +64,7 @@ h1, h2 {
   border-radius: 14px;
   text-align: center;
   padding-bottom: 20px;
-  overflow: hidden;        /* i used ai to hide the any text outside of the borders*/
+  overflow: hidden;       
  
   /* box shading for swag*/
   box-shadow:  0 10px 20px rgb(87, 200, 234);
@@ -124,7 +124,7 @@ h1, h2 {
   font-weight: bold;
   color: #e63946;
 }
-/* i made it so the cards with move into a 2nd row to accomodate phone screens or smaller ui's*/
+/* i used ai to help generate a more universal display: they move into a 2nd row to accomodate phone screens or smaller ui's*/
 
 @media (max-width: 800px) {
   .card-row {
