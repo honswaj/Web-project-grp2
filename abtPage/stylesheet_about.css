@@ -153,7 +153,8 @@ h1, h2 {
   margin-left: 29%;
   margin-right: 29%;
   background-color: white;
-  margin-bottom: 3cap;
+  margin-bottom: 2cap;
+  margin-top: 2cap;
 }
 
 table {
@@ -163,10 +164,10 @@ table {
 ol ul {list-style:square;}
 table, th, td{
     border: 4px solid #3dbce3;
+    padding: 8px;
 }
 .tableFact {
   background-color: white;
-
 }
 .aboutInfo {
   text-align: center;
