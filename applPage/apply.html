@@ -16,7 +16,7 @@
 
 <body>
   <header class="topbar">
-    <img class="cornerLogo" src="logo.png">
+    <img class="cornerLogo" alt="logo" src="logo.png">
 
   <nav class="nav">
     <p class="menu"><a href="../homePage/index.html">Home</a></p> 
@@ -25,10 +25,8 @@
     <p class="menu"><a href="../abtPage/about.html">About</a></p> 
   </nav>
   </header>
-</body>
 
   <main id="main" class="wrap layout">
- 
     <aside class="summary">
       <h1>Apply to Vinggroup</h1>
       <p style="font-weight: 600;">Tell us who you are and which role fits you. A recruiter reads every application and replies within five working days.</p>
@@ -42,7 +40,7 @@
       </ol>
     </div>
  
-      <p style="font-weight: 600;">Questions before you apply? Email: <a href="mailto: WeAreTheRealVinggroup@gmail.com">WeAreTheRealVinggroup@gmail.com</a>.</p>
+      <p style="font-weight: 600;">Questions before you apply? Email: <a href="mailto:WeAreTheRealVinggroup@gmail.com">WeAreTheRealVinggroup@gmail.com</a>.</p>
     </aside>
 
     <form class="tablesInfo" action="confirmation.html" method="post">
@@ -50,7 +48,7 @@
       <fieldset class="jobno">
         <legend>The job</legend>
         <div class="field wide">
-          <label for="job-ref">Job reference number: </span></label>
+          <label for="job-ref">Job reference number: </label>
           <input type="text" id="job-ref" name="job_ref" maxlength="5" pattern="[A-Za-z0-9]{5}" title="Exactly 5 letters or numbers">
         </div>
       </fieldset>
@@ -59,22 +57,22 @@
         <legend>Personal details</legend>
         <!--I use ai for help making me the pattern and the autocomplete -->
         <div class="field">
-          <label for="first-name">First name: </span></label>
+          <label for="first-name">First name: </label>
           <input type="text" id="first-name" name="first_name" maxlength="20" pattern="[A-Za-z]{1,20}" title="Letters only, up to 20 characters" autocomplete="given-name" required>
         </div>
  
         <div class="field">
-          <label for="last-name">Last name: </span></label>
+          <label for="last-name">Last name: </label>
           <input type="text" id="last-name" name="last_name" maxlength="20" pattern="[A-Za-z]{1,20}" title="Letters only, up to 20 characters" autocomplete="family-name" required>
         </div>
  
         <div class="field">
-          <label for="dob">Date of birth: </span></label>
+          <label for="dob">Date of birth: </label>
           <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" maxlength="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}" title="Use the format dd/mm/yyyy" autocomplete="bday">
         </div>
  
         <fieldset class="group">
-          <legend>Gender: </span></legend>
+          <legend>Gender: </legend>
           <div class="choices">
             <label class="choice"><input type="radio" name="gender" value="female" required> Female</label>
             <label class="choice"><input type="radio" name="gender" value="male"> Male</label>
@@ -87,17 +85,17 @@
         <legend>Address</legend>
  
         <div class="field wide">
-          <label for="street">Street address: </span></label>
-          <input type="text" id="street" name="street" maxlength="40" autocomplete="street-address" required>
+          <label for="street">Street address: </label>
+          <input type="text" id="street" name="street" maxlength="40" autocomplete="address-line1" required>
         </div>
  
         <div class="field">
-          <label for="suburb">Suburb/Town: </span></label>
+          <label for="suburb">Suburb/Town: </label>
           <input type="text" id="suburb" name="suburb" maxlength="40" autocomplete="address-level2" required>
         </div>
  
         <div class="field">
-          <label for="state">State: </span></label>
+          <label for="state">State: </label>
           <select id="state" name="state" autocomplete="address-level1" required>
             <option value="">Choose a state</option>
             <option>VIC</option>
@@ -112,7 +110,7 @@
         </div>
  
         <div class="field">
-          <label for="postcode">Postcode: </span></label>
+          <label for="postcode">Postcode: </label>
           <input type="text" id="postcode" name="postcode" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" title="Exactly 4 digits" autocomplete="postal-code" required>
         </div>
       </fieldset>
@@ -120,7 +118,7 @@
       <fieldset class="infoContact">
         <legend>Contact</legend>
         <div class="field">
-          <label for="email">Email: </span></label>
+          <label for="email">Email: </label>
           <input type="email" id="email" name="email" autocomplete="email" required>
         </div>
  
@@ -152,7 +150,6 @@
         <button type="reset" class="secondary">Clear form</button>
       </div>
     </form>
- </div>
   </main>
  
 <footer class="siteFooter">
@@ -163,7 +160,7 @@
   <div class="footerBottom">
     <p>&copy; 2026 Vinggroup, Group Project Website.</p>
     <a href="https://www.swinburne.edu.au/">
-      <img src="logo (1).png" alt="Swinburne logo">
+      <img src="Swinburne.png" alt="Swinburne logo">
     </a>
   </div>
 </footer>
