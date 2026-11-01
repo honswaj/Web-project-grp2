@@ -168,6 +168,14 @@ table, th, td{
   background-color: white;
 
 }
+.aboutInfo {
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-bottom: 2%;
+}
 .infobar th {
   background-color: #3d322a;
   color: #dbd3ce;
@@ -175,6 +183,17 @@ table, th, td{
 }
 .classtime {
   font-weight: 600;
+  margin-top: 8%;
+}
+.grpphoto {
+  display: flex;
+  justify-content: center;
+  padding: 20px 25px;
+  margin-bottom: 4%;
+}
+.grpphoto img {
+  max-width: 100%;           /* shrinks on small screens */
+  height: 370px;
 }
 
 .siteFooter {
@@ -224,4 +243,21 @@ table, th, td{
 .footerBottom p {
   color: #dbd3ce;
   margin: 0;
+}
+.acknowledge h1 {
+  color: #3d322a;
+  border: #3dbce3 solid 5px;
+  padding: 6px 6px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 8%;
+  background-color: white;
+}
+.acknowledge p {
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-bottom: 5%;
 }
