@@ -1,145 +1,144 @@
+
+/*1. GENERAL SETTINGS*/
+
 * {
     font-family: "Segoe UI", Tahoma, Arial, sans-serif;
     color: #3d322a;
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f6f2ef;
+}
+
+main {
+    flex: 1;
+}
+
+/*2. NAVIGATION BAR*/
+
+.topbar {
+    background-color: #3d322a;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    justify-content: flex-start; /* Always start on the left */
+    padding: 10px 20px;
+    border-top: #3dbce3 solid 7px;
+    border-bottom: #3dbce3 solid 7px;
+}
+
+.cornerLogo {
+    width: 100px;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 12px;
+}
+
+.nav p {
+    margin: 0;
+}
+
+.menu {
+    display: inline-block;
+}
+
+nav ul {
+    list-style: none;
 }
 
 nav a {
     text-decoration: none;
     font-weight: 800;
-    padding:0.2em 0.6em;
+    padding: 0.2em 0.6em;
     border: 4px solid #3dbce3;
     background-color: #dbd3ce;
     color: #3d322a;
-    }   
-.menu {
-    display: inline-block;
-}
-nav ul { list-style:none;}
-
-.topbar {
-   background-color: #3d322a;
-  display: flex;
-  align-items: center;
-  gap: 17px;
-  justify-content: flex-start; /*Alway start on the left*/
-  padding: 10px 20px;
-  border-top: #3dbce3 solid 7px;
-  border-bottom: #3dbce3 solid 7px;
-}
-
-.nav {
-  display: flex;
-  gap: 12px;
-}
-
-.nav p {
-  margin: 0;
 }
 
 nav a:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 8px #2f2620;
 }
-.cornerLogo {
-width: 100px;
-height: auto;
-}
 
-* {
-    box-sizing: border-box;
-    margin-top: 0;
-    padding: 0;
-}
+/*3. JOB PAGE HEADING*/
 
-/* heading */
 #job-openings {
     text-align: center;
+    margin: 30px auto;
     margin-bottom: 30px;
     color: #000000;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 30px;
     font-size: xx-large;
 }
 
-.job-subtitle{
+.job-subtitle {
     text-align: center;
     margin: 0 auto 30px;
 }
 
+/*4. JOB LISTINGS LAYOUT*/
+
 .job-listings {
     display: flex;
-    flex-direction: column;      /* stack the jobs vertically */
+    flex-direction: column; /* Stack the jobs vertically */
     gap: 30px;
     width: 90%;
     max-width: 1200px;
     margin: 0 auto 30px;
 }
 
-ul {
-    padding-left: 1.2em;
+.jo1_container {
+    display: block;
 }
 
-.box1 h3,
-.box2 h3 {
-    color: #3dbce3;
+.jo2_container {
+    display: block;
 }
+
+/*5. JOB BOXES*/
 
 .box1,
 .box2 {
+    display: block;
+    width: 100%;
     background-color: #3d322a;
     color: #ffffff;
     border: none;
     border-left: 6px solid #3dbce3;
     border-radius: 12px;
-    padding: 28px;
-}
-
-.box2 {
-    display: flex;              /* text left, image right */
-    align-items: stretch;       /* image matches the text height */
-    gap: 24px;
-    width: 100%;
     padding: 24px;
-    background-color: #3d322a;
-    border-left: 6px solid #3dbce3;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin: 0;
 }
-
 
 .box1 {
     flex: 0 0 60%;
     border-radius: 2%;
 }
 
-.box1 p {
-    margin-left: auto;
-    line-height: 1.6;
-    color: #ffffff;
-}
-
-.box1 {
-    display: flex;              /* text left, image right */
-    align-items: stretch;       /* image matches the text height */
+.box2 {
+    align-items: stretch;
     gap: 24px;
-    width: 100%;
-    padding: 24px;
-    background-color: #3d322a;
-    border-left: 6px solid #3dbce3;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.jo1_container .box1 {
+    width: 60%;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.box1 h3,
-.box2 h3 {
-    color: #3dbce3;
-}
-
-.box1 li {
-    color: #ffffff;
-    line-height: 1.4;
-}
+/*6. JOB TEXT AND HEADINGS*/
 
 .job-text {
     flex: 1 1 60%;
@@ -147,17 +146,49 @@ ul {
 }
 
 h2 {
-    color:#ffffff
+    color: #ffffff;
+}
+
+.J {
+    color: #3dbce3;
+}
+
+.bold {
+    color: #3dbce3;
+}
+
+.box1 h3,
+.box2 h3 {
+    color: #3dbce3;
+}
+
+.box1 p,
+.box2 p {
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.box1 p {
+    margin-left: auto;
+}
+
+.box2 p {
+    margin-right: auto;
 }
 
 .box1 #l {
     margin-right: 50px;
 }
 
-.box2 p {
-    margin-right: auto; 
-    line-height: 1.6;
+/*7. JOB LIST*/
+
+ul {
+    padding-left: 1.2em;
+}
+
+.box1 li {
     color: #ffffff;
+    line-height: 1.4;
 }
 
 .box2 li {
@@ -166,7 +197,100 @@ h2 {
     color: #ffffff;
 }
 
+/*8. JOB ASIDE AND IMAGES*/
+
+.job-aside {
+    float: right;
+    width: 25%;
+    margin: 0 0 16px 24px;
+    padding: 16px;
+    border: 3px solid #3dbce3;
+    background-color: #dbd3ce;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.jo1_img,
+.jo2_img {
+    flex: 0 0 35%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    border-style: solid;
+}
+
+aside .jo1_img,
+aside .jo2_img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Used AI to help with this part. Took hours */
+    object-fit: cover;
+}
+
+aside:hover {
+    transform: translateY(-4px);
+}
+
+.job-aside p {
+    color: #3d322a;
+}
+
+/*9. FOOTER*/
+
+.siteFooter {
+    background-color: #3d322a;
+    padding: 12px 2%;
+}
+
+.footerLinks {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: #dbd3ce;
+    border: #3dbce3 5px solid;
+    padding: 1.5%;
+}
+
+.footerLinks a {
+    color: #3d322a;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.footerLinks a:hover {
+    color: #3dbce3;
+}
+
+.footerLinks a:first-child {
+    text-align: left;
+    padding-left: 20px;
+    margin-left: 18%;
+}
+
+.footerLinks a:last-child {
+    text-align: right;
+    padding-right: 20px;
+    margin-right: 18%;
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerBottom p {
+    color: #dbd3ce;
+    margin: 0;
+}
+
+/*10. RESPONSIVE DESIGN*/
+
 @media screen and (max-width: 600px) {
+
     .job-listings {
         flex-direction: column;
         gap: 20px;
@@ -180,151 +304,5 @@ h2 {
     }
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f6f2ef;
-}
-
-main {
-    flex: 1;
-}
-
-.jo1_container {
-    display: block;
-}
-
-.jo2_container {
-    display: block;
-}
-
-.jo1_container .box1 {
-width: 60%;
-margin: 0;
-box-sizing: border-box;
-}
-
-.jo1_img {
-    flex: 0 0 35%;
-    width: 35%;
-    object-fit: cover;          
-    border-radius: 8px;
-    display: block;
-    border-style: solid;
-}
-
-.jo2_img {
-    flex: 0 0 35%;
-    width: 35%;
-    object-fit: cover; 
-    border-radius: 8px;
-    display: block;
-    border-style: solid;
-}
-
-.bold {
-    color: #3dbce3;
-}
-
-.J {
-    color: #3dbce3;
-}
-
-.siteFooter {
-  background-color: #3d322a;
-  padding: 12px 2%;
-}
-
-.footerLinks {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-.footerLinks {
-  background-color: #dbd3ce;
-  border: #3dbce3 5px solid;
-  padding: 1.5%;
-}
-.footerLinks a {
-  color: #3d322a;
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 20px;
-}
-
-.footerLinks a:hover {
-  color: #3dbce3;
-}
-
-.footerLinks a:first-child {
-  text-align: left;
-  padding-left: 20px;
-  margin-left: 18%;
-}
-
-.footerLinks a:last-child {
-  text-align: right;
-  padding-right: 20px;
-  margin-right: 18%;
-}
-
-.footerBottom {
-  display: flex;
-  justify-content: space-between;  
-  align-items: center;
-}
-.job-aside {
-    float: right;
-    width: 25%;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid black;
-}
-
-.box1, .box2 {
-    display: block;
-}
-
-aside {
-    float: right;
-    width: 25%;
-    margin: 0 0 16px 24px;
-    padding: 16px;
-    border: 3px solid #3dbce3;
-
-    background-color: #dbd3ce;               
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
-    text-align: left;
-    transition: transform 0.2s;
-}
-
-aside .jo1_img,
-aside .jo2_img {
-    width: 100%;
-    aspect-ratio: 1 / 1; /*used Ai to help with this part. took hours*/
-    object-fit: cover;
-}
-
-aside:hover {
-    transform: translateY(-4px);               
-}
-
-.job-aside p {
-    color: #3d322a;
-}
-
-.footerBottom p {
-  color: #dbd3ce;
-  margin: 0;
-}
-/*used Ai to fix the pictures and rearrange and help with the layout and formatting of the page*/
+/* Used AI to fix the pictures and rearrange
+   and help with the layout and formatting of the page */
