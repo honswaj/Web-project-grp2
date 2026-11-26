@@ -1,32 +1,51 @@
 /* i add this in to ensures the HTML root takes up the full height of the viewport */
-html {
+html, body {
   height: 100%;
-}
-
-body {
   margin: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #3d322a;
-  background: #dbd3ce;
+  padding: 0;
+  width: 100%;
 }
 
 .topbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box;
+  background-color: #3d322a;
+  display: flex;
+  align-items: center;
+  gap: 17px;
   justify-content: flex-start; /*Alway start on the left*/
   padding: 10px 20px;
+  border-top: #3dbce3 solid 7px;
+  border-bottom: #3dbce3 solid 7px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+
+
+.nav a {
+    text-decoration: none;
+    font-weight: 800;
+    padding:0.2em 0.6em;
+    border: 4px solid #3dbce3;
+    background-color: #dbd3ce;
+    color: #3d322a;
+    }   
+.menu {
+    display: inline-block;
+}
+nav ul { list-style:none;}
+.nav {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   gap: 12px;
+}
+nav a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 8px #2f2620;
+}
+* {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    color: #3d322a;
 }
 
 .search { display: flex; gap: 6px; justify-content: space-evenly; margin-left: auto;}
@@ -46,38 +65,80 @@ body {
 }
 
 .cornerLogo {
-  height: 60px;
-  width: auto;
+    top: 10px;
+    right: 10px;
+    width: 80px;
 }
 
-nav ul {
-  display: flex;
-  align-items: center;
-  gap: 12px; 
-  margin: 0;
-  padding: 0;
-  list-style: none;
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-nav a {
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 1.1rem;
-  padding: 0.2em 0.6em;
-  border: 4px solid #3dbce3;
-  background-color: #dbd3ce;
-  color: #3d322a;
-  display: inline-block;
+.content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-main {
-  margin: auto; 
-}
 
-.site-footer {
-  width: 100%;
+.siteFooter {
   background-color: #3d322a;
-  color: #dbd3ce;
-  padding: 15px 8px;
+  padding: 12px 2%;
+  margin: 0;
+  width: 100%;
   box-sizing: border-box;
 }
+
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.footerLinks {
+  background-color: #dbd3ce;
+  border: #3dbce3 5px solid;
+  padding: 1.5%;
+}
+.footerLinks a {
+  color: #3d322a;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.footerLinks a:hover {
+  color: #3dbce3;
+}
+
+.footerLinks a:first-child {
+  text-align: left;
+  padding-left: 20px;
+  margin-left: 18%;
+}
+
+.footerLinks a:last-child {
+  text-align: right;
+  padding-right: 20px;
+  margin-right: 18%;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  
+}
+
+.footerBottom p {
+    color: #eeeae7;
+    margin: 0;
+}
+
+
+
