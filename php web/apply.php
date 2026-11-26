@@ -1,94 +1,148 @@
-<?php
-#__DIR__ Is the folder that the php is in
-require_once __DIR__ . '/includes/functions.php';
-require_once __DIR__ . '/includes/db.php';
-
-$states = ['VIC', 'NSW', 'QLD', 'NT', 'WA', 'SA', 'TAS', 'ACT'];
-$allSkills = ['communication', 'teamwork', 'problem-solving', 'first-aid', 'licence', 'computing'];
-$errors = [];
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $f = fn(string $k): string => is_string($_POST[$k] ?? null) ? trim($_POST[$k]) : '';
-
-    $jobRef   = strtoupper($f('job_ref'));
-    $first    = $f('first_name');
-    $last     = $f('last_name');
-    $dob      = $f('dob');
-    $gender   = $f('gender');
-    $street   = $f('street');
-    $suburb   = $f('suburb');
-    $state    = $f('state');
-    $postcode = $f('postcode');
-    $email    = $f('email');
-    $phone    = $f('phone');
-    $other    = $f('other_skills');
-    $skills   = array_intersect($allSkills, (array)($_POST['skills'] ?? []));
-    $dobDate  = DateTime::createFromFormat('d/m/Y', $dob);
-// I have used ai for this part 
-    $rules = [
-    'job_ref'      => ['/^[A-Za-z0-9]{5}$/',   'Job reference must be exactly 5 letters or numbers.'],
-    'first_name'   => ['/^[A-Za-z]{1,20}$/',   'First name must be letters only, up to 20 characters.'],
-    'last_name'    => ['/^[A-Za-z]{1,20}$/',   'Last name must be letters only, up to 20 characters.'],
-    'gender'       => ['/^(female|male|other)$/', 'Choose a gender.'],
-    'street'       => ['/^.{1,40}$/u',         'Street address is required (up to 40 characters).'],
-    'suburb'       => ['/^.{1,40}$/u',         'Suburb/Town is required (up to 40 characters).'],
-    'state'        => ['/^(VIC|NSW|QLD|NT|WA|SA|TAS|ACT)$/', 'Choose a state from the list.'],
-    'postcode'     => ['/^[0-9]{4}$/',         'Postcode must be exactly 4 digits.'],
-    'phone'        => ['/^[0-9]{8,12}$/',      'Phone number must be 8 to 12 digits.'],
-    'other_skills' => ['/^.{0,500}$/su',       'Other skills must be 500 characters or fewer.'],
-];
-
-foreach ($rules as $field => [$pattern, $message]) {
-    if (!preg_match($pattern, $f($field))) { $errors[] = $message; }
-}
-if (!csrf_ok())                                      $errors[] = 'Your session expired. Please try again.';
-if (!$dobDate || $dobDate->format('d/m/Y') !== $dob) $errors[] = 'Enter a real date of birth as dd/mm/yyyy.';
-if (!filter_var($email, FILTER_VALIDATE_EMAIL))      $errors[] = 'Enter a valid email address.';
-// This block runs only after every validation check has passed, It checks whether that the job exists, saves the application to the database, and sends the person to the thank-you page.
-    if (!$errors) {
-        try {
-            $q = db()->prepare('SELECT id FROM jobs WHERE job_ref = ?');
-            $q->execute([$jobRef]);
-            $jobId = $q->fetchColumn();
-
-            if ($jobId) {
-                db()->prepare(
-                    'INSERT INTO applications (job_id, first_name, last_name, dob, gender, street, suburb, state, postcode, email, phone, skills, other_skills)
-                     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)'
-                )->execute([$jobId, $first, $last, $dobDate->format('Y-m-d'), $gender, $street, $suburb, $state, $postcode, $email, $phone, implode(', ', $skills), $other]);
-                header('Location: confirmation.html');
-                exit;
-            }
-            $errors[] = 'That job reference does not match any job.';
-        } catch (PDOException $ex) {
-            error_log($ex->getMessage());
-            $errors[] = 'Sorry, we could not save your application. Please try again later.';
-        }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="Application, Vinggroup">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply for Vinggroup</title>
+  <link rel="stylesheet" href="apply.css">
+  <style>
+    .cornerLogo {
+      height: 60px;
+      width: auto;
     }
-}
+  </style>
+</head>
 
-$pageTitle = 'Apply for Vinggroup';
-$mainClass = 'wrap layout';
-require __DIR__ . '/includes/header.php';
-?>
-    <?php include __DIR__ . '/includes/apply-summary.html'; ?>
+<body>
+  <?php include 'header.inc'; ?>
 
-    <form class="tablesInfo" action="apply.php" method="post">
-      <?php if ($errors): ?>
-        <div class="error">
-          <ul>
-            <?php foreach ($errors as $message): ?><li><?= e($message) ?></li><?php endforeach; ?>
-          </ul>
+  <main id="main" class="wrap layout">
+    <aside class="summary">
+      <h1>Apply to Vinggroup</h1>
+      <p style="font-weight: 600;">Tell us who you are and which role fits you. A recruiter reads every application and replies within five working days.</p>
+      <div class="infoBox">
+        <h2 id="next-heading">What happens next</h2>
+        <ol class="steps">
+          <li>We<strong> review</strong> your application against the role.</li>
+          <li><strong>A short call</strong> with a recruiter, about 20 minutes.</li>
+          <li><strong>Technical interview</strong> with the team you would join.</li>
+          <li><strong>Offer and medical.</strong> Offshore roles need an offshore medical before a start date.</li>
+        </ol>
+      </div>
+ 
+      <p style="font-weight: 600;">Questions before you apply? Email: <a href="mailto:WeAreTheRealVinggroup@gmail.com">WeAreTheRealVinggroup@gmail.com</a>.</p>
+    </aside>
+
+    <form class="tablesInfo" action="process_eoi.php" method="post" novalidate="novalidate">
+
+      <fieldset class="jobno">
+        <legend>The job</legend>
+        <div class="field wide">
+          <label for="job-ref">Job reference number: </label>
+          <input type="text" id="job-ref" name="job_ref" maxlength="5" pattern="[A-Za-z0-9]{5}" title="Exactly 5 letters or numbers">
         </div>
-      <?php endif; ?>
-      <?= csrf_field() ?>
-
-      <?php include __DIR__ . '/includes/apply-fields.html'; ?>
+      </fieldset>
+ 
+      <fieldset class="personalDetails">
+        <legend>Personal details</legend>
+        <div class="field">
+          <label for="first-name">First name: </label>
+          <input type="text" id="first-name" name="first_name" maxlength="20" pattern="[A-Za-z]{1,20}" title="Letters only, up to 20 characters" autocomplete="given-name" required>
+        </div>
+ 
+        <div class="field">
+          <label for="last-name">Last name: </label>
+          <input type="text" id="last-name" name="last_name" maxlength="20" pattern="[A-Za-z]{1,20}" title="Letters only, up to 20 characters" autocomplete="family-name" required>
+        </div>
+ 
+        <div class="field">
+          <label for="dob">Date of birth: </label>
+          <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" maxlength="10" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}" title="Use the format dd/mm/yyyy" autocomplete="bday">
+        </div>
+ 
+        <fieldset class="group">
+          <legend>Gender: </legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="gender" value="female" required> Female</label>
+            <label class="choice"><input type="radio" name="gender" value="male"> Male</label>
+            <label class="choice"><input type="radio" name="gender" value="other"> Other</label>
+          </div>
+        </fieldset>
+      </fieldset>
+ 
+      <fieldset class="adress">
+        <legend>Address</legend>
+ 
+        <div class="field wide">
+          <label for="street">Street address: </label>
+          <input type="text" id="street" name="street" maxlength="40" autocomplete="address-line1" required>
+        </div>
+ 
+        <div class="field">
+          <label for="suburb">Suburb/Town: </label>
+          <input type="text" id="suburb" name="suburb" maxlength="40" autocomplete="address-level2" required>
+        </div>
+ 
+        <div class="field">
+          <label for="state">State: </label>
+          <select id="state" name="state" autocomplete="address-level1" required>
+            <option value="">Choose a state</option>
+            <option>VIC</option>
+            <option>NSW</option>
+            <option>QLD</option>
+            <option>NT</option>
+            <option>WA</option>
+            <option>SA</option>
+            <option>TAS</option>
+            <option>ACT</option>
+          </select>
+        </div>
+ 
+        <div class="field">
+          <label for="postcode">Postcode: </label>
+          <input type="text" id="postcode" name="postcode" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" title="Exactly 4 digits" autocomplete="postal-code" required>
+        </div>
+      </fieldset>
+ 
+      <fieldset class="infoContact">
+        <legend>Contact</legend>
+        <div class="field">
+          <label for="email">Email: </label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+ 
+        <div class="field">
+          <label for="phone">Phone number: </label>
+          <input type="tel" id="phone" name="phone" inputmode="numeric" maxlength="12" pattern="[0-9]{8,12}" title="8 to 12 digits, numbers only" autocomplete="tel">
+        </div>
+      </fieldset>
+ 
+      <fieldset class="skills">
+        <legend>Skills</legend>
+ 
+        <div class="choices wide">
+          <label class="choice"><input type="checkbox" name="skills[]" value="communication"> Communication</label>
+          <label class="choice"><input type="checkbox" name="skills[]" value="teamwork"> Teamwork</label>
+          <label class="choice"><input type="checkbox" name="skills[]" value="problem-solving"> Problem solving</label>
+          <label class="choice"><input type="checkbox" name="skills[]" value="first-aid"> First aid</label>
+          <label class="choice"><input type="checkbox" name="skills[]" value="licence"> Driver licence</label>
+          <label class="choice"><input type="checkbox" name="skills[]" value="computing"> Computer skills</label>
+        </div>
+ 
+        <div class="field wide other">
+          <label for="other-skills">Other skills</label>
+          <textarea id="other-skills" name="other_skills" rows="5"></textarea>
+        </div>
+      </fieldset>
 
       <div class="buttons">
         <button type="submit">Send application</button>
         <button type="reset" class="secondary">Clear form</button>
       </div>
     </form>
-  
-<?php require __DIR__ . '/includes/footer.php'; ?>
+  </main>
+ 
+  <?php include 'footer.inc'; ?>
+</body>
+</html>
