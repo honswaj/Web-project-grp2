@@ -1,0 +1,308 @@
+
+/*1. GENERAL SETTINGS*/
+
+* {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    color: #3d322a;
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f6f2ef;
+}
+
+main {
+    flex: 1;
+}
+
+/*2. NAVIGATION BAR*/
+
+.topbar {
+    background-color: #3d322a;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    justify-content: flex-start; /* Always start on the left */
+    padding: 10px 20px;
+    border-top: #3dbce3 solid 7px;
+    border-bottom: #3dbce3 solid 7px;
+}
+
+.cornerLogo {
+    width: 100px;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 12px;
+}
+
+.nav p {
+    margin: 0;
+}
+
+.menu {
+    display: inline-block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 800;
+    padding: 0.2em 0.6em;
+    border: 4px solid #3dbce3;
+    background-color: #dbd3ce;
+    color: #3d322a;
+}
+
+nav a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 8px #2f2620;
+}
+
+/*3. JOB PAGE HEADING*/
+
+#job-openings {
+    text-align: center;
+    margin: 30px auto;
+    margin-bottom: 30px;
+    color: #000000;
+    font-size: xx-large;
+}
+
+.job-subtitle {
+    text-align: center;
+    margin: 0 auto 30px;
+}
+
+/*4. JOB LISTINGS LAYOUT*/
+
+.job-listings {
+    display: flex;
+    flex-direction: column; /* Stack the jobs vertically */
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.jo1_container {
+    display: block;
+}
+
+.jo2_container {
+    display: block;
+}
+
+/*5. JOB BOXES*/
+
+.box1,
+.box2 {
+    display: block;
+    width: 100%;
+    background-color: #3d322a;
+    color: #ffffff;
+    border: none;
+    border-left: 6px solid #3dbce3;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+.box1 {
+    flex: 0 0 60%;
+    border-radius: 2%;
+}
+
+.box2 {
+    align-items: stretch;
+    gap: 24px;
+}
+
+.jo1_container .box1 {
+    width: 60%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*6. JOB TEXT AND HEADINGS*/
+
+.job-text {
+    flex: 1 1 60%;
+    min-width: 0;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+.J {
+    color: #3dbce3;
+}
+
+.bold {
+    color: #3dbce3;
+}
+
+.box1 h3,
+.box2 h3 {
+    color: #3dbce3;
+}
+
+.box1 p,
+.box2 p {
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.box1 p {
+    margin-left: auto;
+}
+
+.box2 p {
+    margin-right: auto;
+}
+
+.box1 #l {
+    margin-right: 50px;
+}
+
+/*7. JOB LIST*/
+
+ul {
+    padding-left: 1.2em;
+}
+
+.box1 li {
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+.box2 li {
+    list-style: circle;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
+/*8. JOB ASIDE AND IMAGES*/
+
+.job-aside {
+    float: right;
+    width: 25%;
+    margin: 0 0 16px 24px;
+    padding: 16px;
+    border: 3px solid #3dbce3;
+    background-color: #dbd3ce;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.jo1_img,
+.jo2_img {
+    flex: 0 0 35%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    border-style: solid;
+}
+
+aside .jo1_img,
+aside .jo2_img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Used AI to help with this part. Took hours */
+    object-fit: cover;
+}
+
+aside:hover {
+    transform: translateY(-4px);
+}
+
+.job-aside p {
+    color: #3d322a;
+}
+
+/*9. FOOTER*/
+
+.siteFooter {
+    background-color: #3d322a;
+    padding: 12px 2%;
+}
+
+.footerLinks {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: #dbd3ce;
+    border: #3dbce3 5px solid;
+    padding: 1.5%;
+}
+
+.footerLinks a {
+    color: #3d322a;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.footerLinks a:hover {
+    color: #3dbce3;
+}
+
+.footerLinks a:first-child {
+    text-align: left;
+    padding-left: 20px;
+    margin-left: 18%;
+}
+
+.footerLinks a:last-child {
+    text-align: right;
+    padding-right: 20px;
+    margin-right: 18%;
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerBottom p {
+    color: #dbd3ce;
+    margin: 0;
+}
+
+/*10. RESPONSIVE DESIGN*/
+
+@media screen and (max-width: 600px) {
+
+    .job-listings {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .box1,
+    .box2 {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 0;
+    }
+}
+
+/* Used AI to fix the pictures and rearrange
+   and help with the layout and formatting of the page */
