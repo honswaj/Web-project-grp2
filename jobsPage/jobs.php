@@ -2,13 +2,16 @@
 <?php
 // Job Openings Page
 ?>
-
+<?php
+$base       = '';
+$pageTitle  = 'Job Openings';
+$pageStyles = ['styles/jobs.css'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Job Openings</title>
-    <link rel="stylesheet" href="jobs.css">
+    <?php include __DIR__ . '/../includes/head.inc'; ?>
 
     <style>
     .cornerLogo {
@@ -19,17 +22,7 @@
 </head>
 
 <body>
-  <header class="topbar">
-    <img class="cornerLogo" src="logo.png" alt="Vinggroup logo">
-
-  <nav class="nav">
-    <p class="menu"><a href="../index.php">Home</a></p>
-    <p class="menu"><a href="../jobsPage/jobs.php">Jobs</a></p>
-    <p class="menu"><a href="../applPage/apply.php">Apply</a></p>
-    <p class="menu"><a href="../abtPage/about.php">About</a></p>
-  </nav>
-  </header>
-
+  <?php include __DIR__ . '/../includes/header.inc'; ?>
     <header>
         <section class="intro">
     <h1 id="job-openings">Job Openings</h1>
@@ -60,7 +53,7 @@
                 <h2 class="J">Job 1: Smart Transport Systems Analyst.</h2>
 
                  <aside class="job-aside">
-        <img class="jo1_img" src="analysis_transport.jpg" alt="Transport analysis">
+        <img class="jo1_img" src="images/analysis_transport.jpg" alt="Transport analysis">
         <p>Melbourne, VIC<br>AUD $85,000 to $105,000</p>
     </aside>
 
@@ -97,7 +90,7 @@
                 <h2 class="J">Job 2: Smart Energy Data Engineer.</h2>
 
                  <aside class="job-aside">
-        <img class="jo2_img" src="engineer.jpg" alt="Data engineer">
+        <img class="jo2_img" src="images/engineer.jpg" alt="Data engineer">
         <p>Melbourne, VIC<br>AUD $100,000 to $125,000</p>
     </aside>
 
@@ -132,18 +125,6 @@
         </section>
     </main>
 
-    <footer class="siteFooter">
-      <div class="footerLinks">
-          <a href="https://cos10026-team2-scxeo9av.atlassian.net/jira/software/projects/SCRUM/boards/1" target="_blank" rel="noopener noreferrer">Jira</a>
-          <a href="https://github.com/honswaj/Web-project-grp2" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-
-      <div class="footerBottom">
-          <p>&copy; 2026 Vinggroup, Group Project Website.</p>
-          <a href="https://www.swinburne.edu.au/">
-            <img src="logo%20(1).png" alt="Swinburne logo">
-          </a>
-      </div>
-    </footer>
+    <?php include __DIR__ . '/../includes/footer.inc'; ?>
 </body>
 </html>
