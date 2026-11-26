@@ -1,11 +1,14 @@
+<?php
+$base       = '';
+$pageTitle  = 'Apply for Vinggroup';
+$pageStyles = ['styles/apply.css'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  
   <meta name="keywords" content="Application, Vinggroup">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Apply for Vinggroup</title>
-  <link rel="stylesheet" href="../../applPage/apply.css">
+  <?php include __DIR__ . '/../includes/head.inc'; ?>
   <style>
     .cornerLogo {
       height: 60px;
@@ -15,7 +18,7 @@
 </head>
 
 <body>
-  <?php include 'header.inc'; ?>
+  <?php include __DIR__ . '/../includes/header.inc'; ?>
 
   <main id="main" class="wrap layout">
     <aside class="summary">
@@ -143,6 +146,6 @@
     </form>
   </main>
  
-  <?php include 'footer.inc'; ?>
+  <?php include __DIR__ . '/../includes/footer.inc'; ?>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
-$base       = '../';
+$base       = '';
 $pageTitle  = 'about page';
-$pageStyles = ['abtPage/stylesheet_about.css'];
+$pageStyles = ['styles/stylesheet_about.css'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,7 @@ $pageStyles = ['abtPage/stylesheet_about.css'];
       smart city consultancy.
     </p>
     <div class="grpphoto">
-      <img src="groupphoto.png" alt="photo">
+      <img src="images/groupphoto.png" alt="photo">
     </div>
     <div class="card-row">
   

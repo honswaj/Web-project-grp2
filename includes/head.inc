@@ -12,5 +12,5 @@ $pageStyles = $pageStyles ?? [];
 <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8') ?></title>
 <link rel="stylesheet" href="<?= $base ?>styles/shared.css">
 <?php foreach ($pageStyles as $css): ?>
-<link rel="stylesheet" href="<?= $base . htmlspecialchars($css, ENT_QUOTES, 'UTF-8') ?>">
+<link rel="stylesheet" href="<?= $base . htmlspecialchars($css, ENT_NOQUOTES, 'UTF-8') ?>">
 <?php endforeach; ?>
