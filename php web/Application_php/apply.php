@@ -5,7 +5,7 @@
   <meta name="keywords" content="Application, Vinggroup">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Apply for Vinggroup</title>
-  <link rel="stylesheet" href="../applPage/apply.css">
+  <link rel="stylesheet" href="../../applPage/apply.css">
   <style>
     .cornerLogo {
       height: 60px;
@@ -34,7 +34,7 @@
       <p style="font-weight: 600;">Questions before you apply? Email: <a href="mailto:WeAreTheRealVinggroup@gmail.com">WeAreTheRealVinggroup@gmail.com</a>.</p>
     </aside>
 
-    <form class="tablesInfo" action="process_eoi.php" method="post" novalidate="novalidate">
+    <form class="tablesInfo" action="../Confirmation_php/confirmation.php" method="post" novalidate="novalidate">
 
       <fieldset class="jobno">
         <legend>The job</legend>
