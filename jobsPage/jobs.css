@@ -220,7 +220,7 @@ box-sizing: border-box;
     object-fit: cover;          
     border-radius: 8px;
     display: block;
-    border-style: 3px dashed #ffffff;
+    border-style: solid;
 }
 
 .jo2_img {
@@ -229,7 +229,7 @@ box-sizing: border-box;
     object-fit: cover; 
     border-radius: 8px;
     display: block;
-    border-style: 3px dashed #ffffff;
+    border-style: solid;
 }
 
 .bold {
@@ -327,3 +327,4 @@ aside:hover {
   color: #dbd3ce;
   margin: 0;
 }
+/*used Ai to fix the pictures and rearrange and help with the layout and formatting of the page*/
