@@ -306,3 +306,46 @@ aside:hover {
 
 /* Used AI to fix the pictures and rearrange
    and help with the layout and formatting of the page */
+
+/*11. SEARCH BAR*/
+
+.search_bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 35px;
+    width: 87%;
+}
+
+.search_bar form {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    gap: 10px;
+}
+
+.search_bar input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #3dbce3;
+    border-radius: 5%;
+    background-color: #ffffff;
+    font-size: 13px;
+    outline: none;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    border-color: #3d322a;
+}
+
+.search_bar button {
+    padding: 12px 24px;
+    background-color: #3d322a;
+    color: #ffffff;
+    border: 1px solid #3dbce3;
+    border-radius: 5%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search_bar button:hover {
+    background-color: #3dbce3;
+    color: #3d322a;
+}
