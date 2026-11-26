@@ -1,5 +1,5 @@
 <header class="topbar">
-  <img class="cornerLogo" alt="logo" src="applPage\Logo.png">
+  <img class="cornerLogo" alt="logo" src="../applPage\Logo.png">
 
   <nav class="nav">
     <p class="menu"><a href="../index.php">Home</a></p> 
