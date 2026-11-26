@@ -1,0 +1,264 @@
+body {
+  margin: 0;    
+}
+
+.topbar {
+  background-color: #3d322a;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  justify-content: flex-start; /*Alway start on the left*/
+  padding: 10px 20px;
+  border-top: #3dbce3 solid 7px;
+  border-bottom: #3dbce3 solid 7px;
+}
+
+/*navigation bar */
+.nav a {
+    text-decoration: none;
+    font-weight: 800;
+    padding:0.2em 0.6em;
+    border: 4px solid #3dbce3;
+    background-color: #dbd3ce;
+    color: #3d322a;
+    }   
+.menu {
+    display: inline-block;
+}
+nav ul { list-style:none;}
+.nav {
+  display: flex;
+  gap: 12px;
+}
+nav a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 8px #2f2620;
+}
+* {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    color: #3d322a;
+}
+
+body {
+  background-color: #eeeae7 ;
+}
+/* id's*/
+ 
+h1, h2 {
+  text-align: center;
+  color: #dbd3ce;
+  margin-bottom: 40px;
+}
+/*flex display so they sit side by side; i used ai to help me create more aesthetic looking student ids*/
+.card-row {
+  display: flex;
+  gap: 24px;          
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  flex: 1;                 /* the cards take up the same amount of space flexibly */
+  background-color: #dbd3ce;
+  border: 3px solid #3dbce3;
+  border-radius: 14px;
+  text-align: center;
+  padding-bottom: 20px;
+  overflow: hidden;       
+ 
+  /* box shading for swag*/
+  box-shadow:  0 10px 20px rgb(87, 200, 234);
+  /*i set specific time for the hover effects to work so it isnt jumpy */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+ /*hover effects to enlarge the card slightly*/
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-header {
+  background-color: #3dbce3;
+  color: #3d322a;
+  padding: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+ 
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;      /* makes the avatar a circle */
+  background-color: #dbd3ce;
+  color: #3d322a;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: 3px solid #3d322a;
+  margin: 20px auto 10px;  
+  /*centering contents*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  transition: transform 0.2s;
+}
+ 
+/* hover effects for the avatar*/
+.card:hover .avatar {
+  transform: scale(1.1);
+}
+ 
+.card h2 {
+  margin: 10px 0 5px;
+  color: #3d322a;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+ 
+.card p {
+  margin: 4px 10px;
+  color: #444;
+  font-size: 0.9rem;
+}
+ 
+.student-id {
+  font-weight: bold;
+  color: #e63946;
+}
+/* i used ai to help generate a more universal display: they move into a 2nd row to accomodate phone screens or smaller ui's*/
+
+@media (max-width: 800px) {
+  .card-row {
+    flex-wrap: wrap;
+  }
+  .card {
+    flex: 1 1 40%;
+  }
+}
+.cornerLogo {
+    top: 10px;
+    right: 10px;
+    width: 80px;
+}
+
+.card dl {
+  text-align: left;
+  margin-left: 2cap;
+  margin-right: 2cap;
+}
+
+.tablehead {
+  color: #3d322a;
+  border: #3dbce3 solid 5px;
+  padding: 6px 6px;
+  margin-left: 29%;
+  margin-right: 29%;
+  background-color: white;
+  margin-bottom: 2cap;
+  margin-top: 2cap;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+ol ul {list-style:square;}
+table, th, td{
+    border: 4px solid #3dbce3;
+    padding: 8px;
+}
+.tableFact {
+  background-color: white;
+}
+.aboutInfo {
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-bottom: 2%;
+}
+.infobar th {
+  background-color: #3d322a;
+  color: #dbd3ce;
+  font-weight: 700;
+}
+.classtime {
+  font-weight: 600;
+  margin-top: 8%;
+}
+.grpphoto {
+  display: flex;
+  justify-content: center;
+  padding: 20px 25px;
+  margin-bottom: 4%;
+}
+.grpphoto img {
+  max-width: 100%;           /* shrinks on small screens */
+  height: 370px;
+}
+
+.siteFooter {
+  background-color: #3d322a;
+  padding: 12px 2%;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.footerLinks {
+  background-color: #dbd3ce;
+  border: #3dbce3 5px solid;
+  padding: 1.5%;
+}
+.footerLinks a {
+  color: #3d322a;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.footerLinks a:hover {
+  color: #3dbce3;
+}
+
+.footerLinks a:first-child {
+  text-align: left;
+  padding-left: 20px;
+  margin-left: 18%;
+}
+
+.footerLinks a:last-child {
+  text-align: right;
+  padding-right: 20px;
+  margin-right: 18%;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+}
+
+.footerBottom p {
+  color: #dbd3ce;
+  margin: 0;
+}
+.acknowledge h1 {
+  color: #3d322a;
+  border: #3dbce3 solid 5px;
+  padding: 6px 6px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 8%;
+  background-color: white;
+}
+.acknowledge p {
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-bottom: 5%;
+}
