@@ -1,5 +1,5 @@
 <?php
-// Shared footer. Set $base on the page before including ('' or '../').
+
 $base = $base ?? '';
 ?>
 <footer class="siteFooter">
@@ -11,7 +11,7 @@ $base = $base ?? '';
   <div class="footerBottom">
     <p>&copy; 2026 Vinggroup, Group Project Website.</p>
     <a href="https://www.swinburne.edu.au/">
-      <img src="<?= $base ?>images/logo-1.png" alt="Swinburne logo">
+      <img src="<?= $base ?>images/logo (1).png" alt="Swinburne logo">
     </a>
   </div>
 </footer>

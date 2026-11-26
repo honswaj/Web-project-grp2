@@ -29,6 +29,22 @@ body {
   gap: 12px;
 }
 
+.search { display: flex; gap: 6px; justify-content: space-evenly; margin-left: auto;}
+.search input {
+  padding: 8px 12px;
+  border: 1px solid #3d322a;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.search button {
+  padding: 8px 16px;
+  background: #5acede;
+  color: #3d322a;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .cornerLogo {
   height: 60px;
   width: auto;

@@ -13,17 +13,21 @@ description: [index.html]
 time pre edit: [5:42 PM]
 */ -->
 
-
+<?php
+$base       = '';
+$pageTitle  = 'Home page';
+$pageStyles = ['styles/index.css'];
+$headerClass = 'indexHeader';
+$logoClass = 'logo';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta name="description" content="Home Page">
    <meta name="author" content="Tran Nam Anh - Elbosn">
-   <title>home-page</title>
-
+   <?php include __DIR__ . '/../includes/head.inc'; ?>
    <!-- References to Stylesheet -->
-   <link rel="stylesheet" href="styles/index.css">
 
    <style>
       .logo {
@@ -34,23 +38,7 @@ time pre edit: [5:42 PM]
 
 <body>
 
-   <header class="indexHeader">
-
-      <img src="images/logo.png" class="logo" alt="Ving-Group logo">
-
-      <nav class="nav">
-         <p class="menu"><a href="index.html">Home</a></p>
-         <p class="menu"><a href="jobsPage/jobs.html">Jobs</a></p>
-         <p class="menu"><a href="applPage/apply.html">Apply</a></p>
-         <p class="menu"><a href="abtPage/about.html">About</a></p>
-      </nav>
-
-      <form class="search" action="#">
-         <input type="search" placeholder="Search..." aria-label="Search">
-         <button type="submit">Search</button>
-      </form>
-
-   </header>
+   <?php include __DIR__ . '/../includes/header.inc'; ?>
 
 
    <section class="hero">
@@ -254,41 +242,7 @@ time pre edit: [5:42 PM]
    <hr>
 
 
-   <footer class="siteFooter">
-
-      <div class="footerLinks">
-
-         <a href="https://cos10026-team2-scxeo9av.atlassian.net/jira/software/projects/SCRUM/boards/1"
-            target="_blank"
-            rel="noopener noreferrer">
-            Jira
-         </a>
-
-         <a href="https://github.com/honswaj/Web-project-grp2"
-            target="_blank"
-            rel="noopener noreferrer">
-            GitHub
-         </a>
-
-      </div>
-
-
-      <div class="footerBottom">
-
-         <p>
-            &copy; 2026 Vinggroup, Group Project Website.
-         </p>
-
-         <a href="https://www.swinburne.edu.au/">
-
-            <img src="logo-1.png"
-                 alt="Swinburne logo">
-
-         </a>
-
-      </div>
-
-   </footer>
+   <?php include __DIR__ . '/../includes/footer.inc'; ?>
 
 </body>
 </html>

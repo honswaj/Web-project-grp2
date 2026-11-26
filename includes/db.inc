@@ -1,8 +1,5 @@
 <?php
-// Database connection (PDO). Use it with:
-//   require_once __DIR__ . '/../includes/db.inc';
-//   $pdo = db();
-// Credentials come from includes/settings.php.
+
 
 function db(): PDO
 {

@@ -37,7 +37,7 @@ $pageStyles = ['styles/apply.css'];
       <p style="font-weight: 600;">Questions before you apply? Email: <a href="mailto:WeAreTheRealVinggroup@gmail.com">WeAreTheRealVinggroup@gmail.com</a>.</p>
     </aside>
 
-    <form class="tablesInfo" action="../Confirmation_php/confirmation.php" method="post" novalidate="novalidate">
+    <form class="tablesInfo" action="confirmation.php" method="post" novalidate="novalidate">
 
       <fieldset class="jobno">
         <legend>The job</legend>

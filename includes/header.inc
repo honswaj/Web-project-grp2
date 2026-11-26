@@ -1,14 +1,9 @@
 <?php
-// Shared top bar and navigation.
-// Optional settings, set on the page before including:
-//   $base         '' (root) or '../' (one folder deep)
-//   $headerClass  CSS class for <header> (default 'topbar')
-//   $logoClass    CSS class for the logo (default 'cornerLogo')
-//   $showSearch   true to show the search form (home page)
+
 $base        = $base        ?? '';
 $headerClass = $headerClass ?? 'topbar';
 $logoClass   = $logoClass   ?? 'cornerLogo';
-$showSearch  = $showSearch  ?? false;
+$showSearch  = $showSearch  ?? true;
 ?>
 <header class="<?= $headerClass ?>">
   <img src="<?= $base ?>images/logo.png" class="<?= $logoClass ?>" alt="Ving-Group logo">

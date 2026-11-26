@@ -22,10 +22,6 @@
   border-bottom: #3dbce3 solid 7px;
 }
 
-.logo {
-  height: 60px;
-  width: auto;
-}
 /* I used AI to recommend the display for some of the elements */
 .brand {
   display: flex;
