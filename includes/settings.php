@@ -2,7 +2,7 @@
 
 return [
     'host' => 'localhost',
-    'name' => 'vinggroup',
+    'name' => 'contributions',
     'user' => 'root',
     'pass' => '',
 ];

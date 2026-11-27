@@ -2,7 +2,22 @@
 $base       = '';
 $pageTitle  = 'about page';
 $pageStyles = ['styles/stylesheet_about.css'];
+
+require_once __DIR__ . '/../includes/db.inc';  
+
+$rows = db()->query(
+    "SELECT m.name, c.description
+     FROM members m
+     JOIN contributions c ON c.member_id = m.id
+     ORDER BY m.id, c.id"
+)->fetchAll();
+
+$team = [];
+foreach ($rows as $row) {
+    $team[$row['name']][] = $row['description'];
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,60 +92,18 @@ $pageStyles = ['styles/stylesheet_about.css'];
     </div>
   <br>
   <br>
-    <table class="tableFact">
-      <tr class="infobar">
-        <th>Name</th>
-        <th>Contributions</th>
-      </tr>
-      <tr>
-        <td>Minh</td>
-        <td>Responsible for the 'Apply' page. <br>
-        Fixed bugs in the html files.</td>
-      </tr>
-      <tr>
-        <td>Nam Anh</td>
-        <td>Responsible for the 'Home' page. <br>
-        Created the shared Top-bar.</td>
-      </tr>
-      <tr>
-        <td>Chau Anh</td>
-        <td>Responsible for the 'About' page. <br>
-        Established the design of the website.</td>
-      </tr>
-      <tr>
-        <td>Tuan Anh</td>
-        <td>Responsible for the 'Jobs' page.</td>
-      </tr>
-    </table>
-    <h1 class="tablehead">Our Fun Facts!</h1>
-    <table class="tableFact">
-    
-      <tr class="infobar">
-        <th>Name</th>
-        <th>Dream Job</th>
-        <th>Hobby</th>
-      </tr>
-      <tr>
-        <td>Minh</td>
-        <td>Video game designer</td>
-        <td>Designing and landscape photography</td>
-      </tr>
-      <tr>
-        <td>Nam Anh</td>
-        <td>Robotics engineer</td>
-        <td>Playing the piano</td>
-      </tr>
-      <tr>
-        <td>Chau Anh</td>
-        <td>Travel blogger</td>
-        <td>Cooking new recipes</td>
-      </tr>
-      <tr>
-        <td>Tuan Anh</td>
-        <td>Marine biologist</td>
-        <td>Scuba diving</td>
-      </tr>
-    </table>
+  <table class="tableFact">
+    <tr class="infobar">
+      <th>Name</th>
+      <th>Contributions</th>
+    </tr>
+    <?php foreach ($team as $name => $lines): ?>
+    <tr>
+      <td><?= htmlspecialchars($name) ?></td>
+      <td><?= implode('<br>', array_map('htmlspecialchars', $lines)) ?></td>
+    </tr>
+    <?php endforeach; ?>
+  </table>
 
   <ol class="classtime">
       <li>COS10026/Class 2:
